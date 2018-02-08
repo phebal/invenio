@@ -305,11 +305,11 @@ install-mediaelement:
 	@echo "***********************************************************"
 	rm -rf /tmp/mediaelement
 	mkdir /tmp/mediaelement
-	wget 'http://github.com/johndyer/mediaelement/zipball/2.18.1' -O '/tmp/mediaelement/mediaelement.zip' --no-check-certificate
+	wget 'http://github.com/mediaelement/mediaelement/zipball/2.18.1' -O '/tmp/mediaelement/mediaelement.zip' --no-check-certificate
 	unzip -u -d '/tmp/mediaelement' '/tmp/mediaelement/mediaelement.zip'
 	rm -rf ${prefix}/var/www/mediaelement
 	mkdir ${prefix}/var/www/mediaelement
-	mv /tmp/mediaelement/johndyer-mediaelement-*/build/* ${prefix}/var/www/mediaelement
+	mv /tmp/mediaelement/mediaelement-*/build/* ${prefix}/var/www/mediaelement
 	rm -rf /tmp/mediaelement
 	@echo "***********************************************************"
 	@echo "** MediaElement.js was successfully installed.           **"

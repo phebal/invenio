@@ -63,7 +63,7 @@ CFG_FULL_HTTPS = CFG_SITE_URL.lower().startswith("https://")
 
 
 # Set this to True in order to log some more information.
-DEBUG = False
+DEBUG = True
 
 # List of URIs for which the 'ln' argument must not be added
 # automatically

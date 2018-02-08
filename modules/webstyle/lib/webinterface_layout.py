@@ -301,6 +301,12 @@ except:
     register_exception(alert_admin=True, subject='EMERGENCY')
     WebInterfaceAuthorlistPages = WebInterfaceDumbPages
 
+try:
+    from invenio.galter_webinterface import WebInterfaceGalterPages
+except:
+    register_exception(alert_admin=True, subject='EMERGENCY')
+    WebInterfaceAuthorlistPages = WebInterfaceDumbPages
+
 if CFG_OPENAIRE_SITE:
     try:
         from invenio.openaire_deposit_webinterface import \
@@ -369,6 +375,7 @@ class WebInterfaceInvenio(WebInterfaceSearchInterfacePages):
                    'goto',
                    'info',
                    'authorlist',
+		   'galter'
                ] + test_exports + openaire_exports
 
     def __init__(self):
@@ -442,6 +449,7 @@ class WebInterfaceInvenio(WebInterfaceSearchInterfacePages):
         yourcomments = WebInterfaceYourCommentsPages()
         goto = WebInterfaceGotoPages()
         authorlist = WebInterfaceAuthorlistPages()
+	galter = WebInterfaceGalterPages()
 
 
 # This creates the 'handler' function, which will be invoked directly

@@ -58,6 +58,7 @@ SUBDIRS = bibauthorid \
           webstyle \
           websubmit \
           docextract \
-          pdfchecker
+          pdfchecker \
+          galter
 
 CLEANFILES = *~

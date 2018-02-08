@@ -143,7 +143,7 @@ create_symlinks () {
         for libversion in lib lib64 local/lib local/lib64; do
             for packageversion in site-packages dist-packages; do
                 if [ -d "/usr/$libversion/$pythonversion/$packageversion/" ] && [ ! -L "/usr/$libversion/$pythonversion/$packageversion/invenio" ]; then
-                    $sudo ln -s "${INVENIO_WEB_DSTDIR}/lib/python/invenio" "/usr/$libversion/$pythonversion/$packageversion/invenio"
+                    $sudo ln -sf "${INVENIO_WEB_DSTDIR}/lib/python/invenio" "/usr/$libversion/$pythonversion/$packageversion/invenio"
                 fi
             done
         done
